@@ -34,6 +34,25 @@ namespace DataLibrary.Models
                     Description = "This is a GoogleAd"
                 });
             }
+            
+            if (!_dbContext.Advertisement.Any(a => a.Id == 2))
+            {
+                _dbContext.Add(new Advertise
+                {
+                    Name = "Facebook",
+                    Description = "This is a FacebookAd"
+                });
+            }
+            
+            if (!_dbContext.Advertisement.Any(a => a.Id == 3))
+            {
+                _dbContext.Add(new Advertise
+                {
+                    Name = "Tiktok",
+                    Description = "This is a TiktokAd"
+                });
+            }
+
         }
     }
 }
